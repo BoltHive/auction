@@ -6,26 +6,26 @@ from lnbits.tasks import create_permanent_unique_task
 from loguru import logger
 
 from .tasks import wait_for_paid_invoices
-from .views import example_ext_generic
-from .views_api import example_ext_api
+from .views import auction_ext_generic
+from .views_api import auction_ext_api
 
-db = Database("ext_example")
+db = Database("ext_auction")
 
 scheduled_tasks: list[asyncio.Task] = []
 
-example_ext: APIRouter = APIRouter(prefix="/example", tags=["example"])
-example_ext.include_router(example_ext_generic)
-example_ext.include_router(example_ext_api)
+auction_ext: APIRouter = APIRouter(prefix="/auction", tags=["auction"])
+auction_ext.include_router(auction_ext_generic)
+auction_ext.include_router(auction_ext_api)
 
-example_static_files = [
+auction_static_files = [
     {
-        "path": "/example/static",
-        "name": "example_static",
+        "path": "/auction/static",
+        "name": "auction_static",
     }
 ]
 
 
-def example_stop():
+def auction_stop():
     for task in scheduled_tasks:
         try:
             task.cancel()
@@ -33,7 +33,7 @@ def example_stop():
             logger.warning(ex)
 
 
-def example_start():
+def auction_start():
     # ignore will be removed in lnbits `0.12.6`
     # https://github.com/lnbits/lnbits/pull/2417
     task = create_permanent_unique_task("ext_testing", wait_for_paid_invoices)  # type: ignore
