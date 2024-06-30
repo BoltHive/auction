@@ -1,7 +1,7 @@
 {
   "name": "Build your own!",
-  "short_description": "Extension building guide",
-  "tile": "https://raw.githubusercontent.com/lnbits/example/main/static/bitcoin-extension.png",
+  "short_description": "Auction Extension",
+  "tile": "https://raw.githubusercontent.com/lnbits/auction/main/static/bitcoin-extension.png",
   "min_lnbits_version": "0.12.6",
   "donate": "donate@legend.lnbits.com",
   "contributors": [
@@ -18,16 +18,16 @@
   ],
   "images": [
     {
-      "uri": "https://raw.githubusercontent.com/lnbits/example/main/static/1.png"
+      "uri": "https://raw.githubusercontent.com/lnbits/auction/main/static/1.png"
     },
     {
-      "uri": "https://raw.githubusercontent.com/lnbits/example/main/static/2.png"
+      "uri": "https://raw.githubusercontent.com/lnbits/auction/main/static/2.png"
     },
     {
-      "uri": "https://raw.githubusercontent.com/lnbits/example/main/static/3.png"
+      "uri": "https://raw.githubusercontent.com/lnbits/auction/main/static/3.png"
     }
   ],
-  "description_md": "https://raw.githubusercontent.com/lnbits/example/main/description.md",
-  "terms_and_conditions_md": "https://raw.githubusercontent.com/lnbits/example/main/toc.md",
+  "description_md": "https://raw.githubusercontent.com/lnbits/auction/main/description.md",
+  "terms_and_conditions_md": "https://raw.githubusercontent.com/lnbits/auction/main/toc.md",
   "license": "MIT"
 }
